@@ -9,7 +9,7 @@ namespace CurrencyConverter.Data.Models.Dtos
         public int Id { get; set; }
         public string? Username { get; set; }
         public string? Email { get; set; }
-        public int Conversions { get; set; } = 0;
+        public int Conversions { get; set; }
         public UserPlanEnum Plan { get; set; }
         public UserStateEnum State { get; set; }
         public string Role { get; set; } = "User";

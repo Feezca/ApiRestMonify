@@ -4,6 +4,7 @@ using CurrencyConverter.Data.Models.Enum;
 using CurrencyConverter.Data.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Numerics;
 
 namespace CurrencyConverter.Data.Services.Implementations
 {
@@ -44,6 +45,7 @@ namespace CurrencyConverter.Data.Services.Implementations
                 Password = dto.Password,
                 Username = dto.Username,
                 Email = dto.Email,
+                Conversions = 10,
                 Currencies = new List<UserCurrency>()
             };
             _currencyContext.Users.Add(newUser);
@@ -68,16 +70,20 @@ namespace CurrencyConverter.Data.Services.Implementations
         {
             User userToUpdate = _currencyContext.Users.First(u => u.Id == Id);
             userToUpdate.Plan = dto.Plan;
-            userToUpdate.Conversions = dto.Conversions;
+            userToUpdate.Conversions= dto.Conversions;
 
             _currencyContext.SaveChanges();
         }
         public void ConversionCounter(int Id)
         {
-            User UserConversionCounter = _currencyContext.Users.SingleOrDefault(u => u.Id == Id);
-            UserConversionCounter.Conversions++;
+            User? UserConversionCounter = _currencyContext.Users.SingleOrDefault(u => u.Id == Id);
+            if (UserConversionCounter != null)
+                {
+                    UserConversionCounter.Conversions--;
+                }
             _currencyContext.SaveChanges();
         }
+        
         public bool CheckIfUserExists(int userId)
         {
             User? user = _currencyContext.Users.FirstOrDefault(user => user.Id == userId);
