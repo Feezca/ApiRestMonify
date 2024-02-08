@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carri\\OneDrive\\Escritorio\\Backend\\CurrencyConverter\\CurrencyConverter.csproj": {}
+    "C:\\Users\\carri\\OneDrive\\Escritorio\\.Net\\CurrencyConverter\\CurrencyConverter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carri\\OneDrive\\Escritorio\\Backend\\CurrencyConverter\\CurrencyConverter.csproj": {
+    "C:\\Users\\carri\\OneDrive\\Escritorio\\.Net\\CurrencyConverter\\CurrencyConverter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carri\\OneDrive\\Escritorio\\Backend\\CurrencyConverter\\CurrencyConverter.csproj",
+        "projectUniqueName": "C:\\Users\\carri\\OneDrive\\Escritorio\\.Net\\CurrencyConverter\\CurrencyConverter.csproj",
         "projectName": "CurrencyConverter",
-        "projectPath": "C:\\Users\\carri\\OneDrive\\Escritorio\\Backend\\CurrencyConverter\\CurrencyConverter.csproj",
+        "projectPath": "C:\\Users\\carri\\OneDrive\\Escritorio\\.Net\\CurrencyConverter\\CurrencyConverter.csproj",
         "packagesPath": "C:\\Users\\carri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carri\\OneDrive\\Escritorio\\Backend\\CurrencyConverter\\obj\\",
+        "outputPath": "C:\\Users\\carri\\OneDrive\\Escritorio\\.Net\\CurrencyConverter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carri\\AppData\\Roaming\\NuGet\\NuGet.Config",

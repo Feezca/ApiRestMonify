@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Data",
+    "\\Data\\Entities",
+    "\\Data\\Models",
+    "\\Data\\Models\\Dtos",
+    "\\Data\\Services",
+    "\\Data\\Services\\Implementations"
+  ],
+  "SelectedNode": "\\Controllers\\CurrencyController.cs",
+  "PreviewInSolutionExplorer": false
+}

@@ -82,7 +82,7 @@ namespace CurrencyConverter.Controllers
 
 
         [HttpPut("DeleteUser/{SubscriptId}")]
-        public IActionResult DeleteUser(int SubscriptId)
+        public IActionResult DeleteUser (StateUserDto dto,int SubscriptId)
         {
             UserDto? user = _userService.GetUser(SubscriptId);
             if (user is null)
@@ -92,7 +92,7 @@ namespace CurrencyConverter.Controllers
 
             if (user.Role.ToString() != "Admin")
             {
-                _userService.LogicalDelete(SubscriptId);
+                _userService.LogicalDelete(dto,SubscriptId);
             }
             return NoContent();
         }

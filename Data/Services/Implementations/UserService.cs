@@ -57,13 +57,11 @@ namespace CurrencyConverter.Data.Services.Implementations
             return _currencyContext.Users.FirstOrDefault(p => p.Username == authRequestBody.Username && p.Password == authRequestBody.Password);
         }
 
-        public void LogicalDelete(int id)
+        public void LogicalDelete(StateUserDto dto,int id)
         {
             User? user = _currencyContext.Users.FirstOrDefault(u => u.Id == id);
-            if (user != null)
-            {
-                user.State = UserStateEnum.Inactive;
-            }
+            user.State = dto.UserState;
+
             _currencyContext.SaveChanges();
         }
         public void UpdatePlan(UpdateUserPlanDto dto, int Id)
