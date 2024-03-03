@@ -9,5 +9,6 @@ namespace CurrencyConverter.Data.Services.Interfaces
         void Delete(int currencyCode);
         List<CurrencyDto> GetAll();
         void Update(CreateAndUpdateCurrencyDto dto,int currencyCode);
+        decimal Conversion(ConversionDto dto);
     }
 }

@@ -11,7 +11,6 @@ namespace CurrencyConverter.Data.Services.Interfaces
         UserDto? GetUser(int id);
         void UpdatePlan(UpdateUserPlanDto dto, int userId);
         void LogicalDelete(StateUserDto dto, int userId);
-        void ConversionCounter(int id);
         User? ValidateUser(AuthenticationRequestBodyDto authRequestBody);  
     }
 }

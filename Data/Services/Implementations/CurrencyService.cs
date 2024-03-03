@@ -51,8 +51,18 @@ namespace CurrencyConverter.Data.Services.Implementations
                 _currencyContext.SaveChanges();
             }
         }
-        
 
+        public decimal Conversion(ConversionDto dto)
+        {
+            User? UserConversionCounter = _currencyContext.Users.SingleOrDefault(u => u.Id == dto.UserId);
+            decimal result = (dto.Amount * dto.ConvertibilityIndexOut) / dto.ConvertibilityIndexIn;
+            if (UserConversionCounter != null)
+            {
+                UserConversionCounter.Conversions--;
+            }
+            _currencyContext.SaveChanges();
+            return result;
+        }
         public void Delete(int Id)
         {
             _currencyContext.Remove(_currencyContext.Currencies.Single(c => c.Id == Id));

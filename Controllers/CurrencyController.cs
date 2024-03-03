@@ -36,6 +36,23 @@ namespace CurrencyConverter.Controllers
             return Created("Created", createCurrencyDto);
         }
 
+        [HttpPost]
+        [Route("{Id}")]
+        public IActionResult Conversion(ConversionDto dto)
+        {
+            int userId = Int32.Parse(HttpContext.User.Claims.FirstOrDefault(x => x.Type.Contains("nameidentifier"))!.Value);
+
+            try
+            {
+                decimal result = CurrencyService.Conversion(dto);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         
         [HttpPut]
         [Route("{currencyId}")]

@@ -70,15 +70,6 @@ namespace CurrencyConverter.Controllers
             }
             return NoContent();
         }
-        [HttpPut("ConversorCounter/{id}")]
-        public IActionResult ConversorCounter(int id)
-        {
-            // guardamos en una variable el momento de la conversion
-            // DateTime fechaHoraActual = DateTime.Now;
-            // Incrementa el contador
-            _userService.ConversionCounter(id);
-            return Ok();
-        }
 
 
         [HttpPut("DeleteUser/{SubscriptId}")]

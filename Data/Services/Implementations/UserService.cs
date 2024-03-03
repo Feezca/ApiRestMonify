@@ -72,15 +72,7 @@ namespace CurrencyConverter.Data.Services.Implementations
 
             _currencyContext.SaveChanges();
         }
-        public void ConversionCounter(int Id)
-        {
-            User? UserConversionCounter = _currencyContext.Users.SingleOrDefault(u => u.Id == Id);
-            if (UserConversionCounter != null)
-                {
-                    UserConversionCounter.Conversions--;
-                }
-            _currencyContext.SaveChanges();
-        }
+        
         
         public bool CheckIfUserExists(int userId)
         {
